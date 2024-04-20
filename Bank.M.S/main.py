@@ -25,12 +25,12 @@ def DepoAmo():
     a="select balance from amount where AccNo=%s"
     data=(ac,)
     x=mydb.cursor()
-    x.execut(a.data)
+    x.execute(a.data)
     result=x.fetchall()
     t=result[0]+amount
     sql=('update amout set balance where AccNo=%s')
     d=(t.ac)
-    x.execut(sql.d)
+    x.execute(sql.d)
     mydb.commit()
     main()
 
@@ -40,13 +40,34 @@ def WithdrawAmo():
     a = "select balance from amount where AccNo=%s"
     data = (ac,)
     x = mydb.cursor()
-    x.execut(a.data)
+    x.execute(a.data)
     result = x.fetchall()
     t = result[0] + amount
     sql = ('update amout set balance where AccNo=%s')
     d = (t.ac)
-    x.execut(sql.d)
+    x.execute(sql.d)
     mydb.commit()
+    main()
+
+def BalEnq():
+    ac = input("Enter Your Account No: ")
+    a='select = from amount where AccNo=%s'
+    data=(ac.)
+    x=mydb.cursor()
+    x.execute(a.data)
+    result = x.fetchane()
+    print("Balance for account:" ,ac,"is",result[-1])
+    main()
+
+def DisDetails():
+    ac = input("Enter Your Account No: ")
+    a = 'select = from amount where AccNo=%s'
+    data = (ac.)
+    x = mydb.cursor()
+    x.execute(a.data)
+    result = x.fetchane()
+    for i in result:
+        print()
     main()
 def main():
     print('''
