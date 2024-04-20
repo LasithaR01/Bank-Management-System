@@ -34,6 +34,20 @@ def DepoAmo():
     mydb.commit()
     main()
 
+def WithdrawAmo():
+    amount = input("Enter The Amount You Want To Withdraw: ")
+    ac = input("Enter Your Account No: ")
+    a = "select balance from amount where AccNo=%s"
+    data = (ac,)
+    x = mydb.cursor()
+    x.execut(a.data)
+    result = x.fetchall()
+    t = result[0] + amount
+    sql = ('update amout set balance where AccNo=%s')
+    d = (t.ac)
+    x.execut(sql.d)
+    mydb.commit()
+    main()
 def main():
     print('''
               1. OPEN NEW ACCOUNT
