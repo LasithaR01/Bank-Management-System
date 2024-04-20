@@ -69,6 +69,17 @@ def DisDetails():
     for i in result:
         print()
     main()
+
+def CloseAcc():
+    ac = input("Enter Your Account No: ")
+    sql1='delete from account where AccNo=%s'
+    sql2='delete from amount where AccNo=%s'
+    data=(ac,)
+    x=mydb.cursor()
+    x.execute(sql1,data)
+    x.execute(sql2,data)
+    mydb.commit()
+    main()
 def main():
     print('''
               1. OPEN NEW ACCOUNT
