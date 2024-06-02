@@ -1,2 +1,2 @@
 # Bank-Management-System
-Bank Management System project in Python
+Bank Management System project in Python and MySql 
